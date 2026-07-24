@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="GcRewardTable">
+  <Property name="SpecialRewardTable">
+		<Property name="SpecialRewardTable" value="GcGenericRewardTableEntry" _id="R_TEMP_ROBOT">
+			<Property name="Id" value="R_TEMP_ROBOT" />
+			<Property name="List" value="GcRewardTableItemList">
+				<Property name="RewardChoice" value="GiveAll" />
+				<Property name="OverrideZeroSeed" value="false" />
+				<Property name="UseInventoryChoiceOverride" value="false" />
+				<Property name="IncrementStat" value="" />
+				<Property name="List">
+					<Property name="List" value="GcRewardTableItem" _index="0">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSpecificShip">
+							<Property name="GcRewardSpecificShip">
+								<Property name="ShipResource" value="GcResourceElement">
+									<Property name="Filename" value="MODELS/COMMON/SPACECRAFT/SENTINELSHIP/SENTINELSHIP_PROC.SCENE.MBIN" />
+									<Property name="ResHandle" value="GcResource">
+										<Property name="ResourceID" value="0" />
+									</Property>
+									<Property name="Seed" value="-8627197555170607105" />
+									<Property name="ProceduralTexture" value="TkProceduralTextureChosenOptionList">
+										<Property name="Samplers" />
+									</Property>
+									<Property name="AltId" value="" />
+								</Property>
+								<Property name="Customisation" value="GcCharacterCustomisationData">
+									<Property name="DescriptorGroups" />
+									<Property name="PaletteID" value="" />
+									<Property name="Colours" />
+									<Property name="TextureOptions" />
+									<Property name="BoneScales" />
+									<Property name="Scale" value="1.000000" />
+								</Property>
+								<Property name="ShipLayout" value="GcInventoryLayout">
+									<Property name="Slots" value="120" />
+									<Property name="Seed" value="1" />
+									<Property name="Level" value="1" />
+								</Property>
+								<Property name="ShipInventory" value="GcInventoryContainer">
+									<Property name="Slots">
+										<Property name="Slots" value="GcInventoryElement" _id="LAUNCHER_ROBO">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="LAUNCHER_ROBO" />
+											<Property name="Amount" value="300" />
+											<Property name="MaxAmount" value="300" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>
+										<Property name="Slots" value="GcInventoryElement" _id="SHIPJUMP_ROBO">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="SHIPJUMP_ROBO" />
+											<Property name="Amount" value="200" />
+											<Property name="MaxAmount" value="200" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>
+										<Property name="Slots" value="GcInventoryElement" _id="HYPERDRIVE_ROBO">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="HYPERDRIVE_ROBO" />
+											<Property name="Amount" value="120" />
+											<Property name="MaxAmount" value="120" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>
+										<Property name="Slots" value="GcInventoryElement" _id="SHIPSHIELD_ROBO">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="SHIPSHIELD_ROBO" />
+											<Property name="Amount" value="200" />
+											<Property name="MaxAmount" value="200" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>
+										<Property name="Slots" value="GcInventoryElement" _id="SHIPGUN_ROBO">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="SHIPGUN_ROBO" />
+											<Property name="Amount" value="1000" />
+											<Property name="MaxAmount" value="1000" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>																														
+										<Property name="Slots" value="GcInventoryElement" _id="LIFESUP_ROBO">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="LIFESUP_ROBO" />
+											<Property name="Amount" value="120" />
+											<Property name="MaxAmount" value="120" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>
+									</Property>
+									<Property name="ValidSlotIndices" />
+									<Property name="Class" value="GcInventoryClass">
+										<Property name="InventoryClass" value="S" />
+									</Property>
+									<Property name="StackSizeGroup" value="GcInventoryStackSizeGroup">
+										<Property name="InventoryStackSizeGroup" value="Default" />
+									</Property>
+									<Property name="BaseStatValues" />
+									<Property name="SpecialSlots" />
+									<Property name="Width" value="0" />
+									<Property name="Height" value="0" />
+									<Property name="IsCool" value="false" />
+									<Property name="Name" value="" />
+									<Property name="Version" value="0" />
+								</Property>
+								<Property name="CostAmount" value="0" />
+								<Property name="CostCurrency" value="GcCurrency">
+									<Property name="Currency" value="Units" />
+								</Property>
+								<Property name="ShipType" value="GcSpaceshipClasses">
+									<Property name="ShipClass" value="Robot" />
+								</Property>
+								<Property name="UseOverrideSizeType" value="true" />
+								<Property name="OverrideSizeType" value="GcInventoryLayoutSizeType">
+									<Property name="SizeType" value="RobotLarge" />
+								</Property>
+								<Property name="NameOverride" value="Exe not working!" />
+								<Property name="IsGift" value="true" />
+								<Property name="IsRewardShip" value="true" />
+								<Property name="FormatAsSeasonal" value="false" />
+								<Property name="ModelViewOverride" value="GcModelViews">
+									<Property name="ModelViews" value="None" />
+								</Property>
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+		</Property>
+		<Property name="SpecialRewardTable" value="GcGenericRewardTableEntry" _id="R_TEMP_EXOTIC">
+			<Property name="Id" value="R_TEMP_EXOTIC" />
+			<Property name="List" value="GcRewardTableItemList">
+				<Property name="RewardChoice" value="GiveAll" />
+				<Property name="OverrideZeroSeed" value="false" />
+				<Property name="UseInventoryChoiceOverride" value="false" />
+				<Property name="IncrementStat" value="" />
+				<Property name="List">
+					<Property name="List" value="GcRewardTableItem" _index="0">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSpecificShip">
+							<Property name="GcRewardSpecificShip">
+								<Property name="ShipResource" value="GcResourceElement">
+									<Property name="Filename" value="MODELS/COMMON/SPACECRAFT/S-CLASS/S-CLASS_PROC.SCENE.MBIN" />
+									<Property name="ResHandle" value="GcResource">
+										<Property name="ResourceID" value="0" />
+									</Property>
+									<Property name="Seed" value="-8627197555170677010" />
+									<Property name="ProceduralTexture" value="TkProceduralTextureChosenOptionList">
+										<Property name="Samplers" />
+									</Property>
+									<Property name="AltId" value="" />
+								</Property>
+								<Property name="Customisation" value="GcCharacterCustomisationData">
+									<Property name="DescriptorGroups" />
+									<Property name="PaletteID" value="" />
+									<Property name="Colours" />
+									<Property name="TextureOptions" />
+									<Property name="BoneScales" />
+									<Property name="Scale" value="1.000000" />
+								</Property>
+								<Property name="ShipLayout" value="GcInventoryLayout">
+									<Property name="Slots" value="120" />
+									<Property name="Seed" value="1" />
+									<Property name="Level" value="1" />
+								</Property>
+								<Property name="ShipInventory" value="GcInventoryContainer">
+									<Property name="Slots">			
+										<Property name="Slots" value="GcInventoryElement" _id="SHIPJUMP1">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="SHIPJUMP1" />
+											<Property name="Amount" value="200" />
+											<Property name="MaxAmount" value="200" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>	
+										<Property name="Slots" value="GcInventoryElement" _id="LAUNCHER">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="LAUNCHER" />
+											<Property name="Amount" value="200" />
+											<Property name="MaxAmount" value="200" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>
+										<Property name="Slots" value="GcInventoryElement" _id="HYPERDRIVE">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="HYPERDRIVE" />
+											<Property name="Amount" value="120" />
+											<Property name="MaxAmount" value="120" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>		
+										<Property name="Slots" value="GcInventoryElement" _id="SHIPSHIELD">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="SHIPSHIELD" />
+											<Property name="Amount" value="200" />
+											<Property name="MaxAmount" value="200" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>														
+										<Property name="Slots" value="GcInventoryElement" _id="SHIPGUN1">
+											<Property name="Type" value="GcInventoryType">
+												<Property name="InventoryType" value="Technology" />
+											</Property>
+											<Property name="Id" value="SHIPGUN1" />
+											<Property name="Amount" value="0" />
+											<Property name="MaxAmount" value="100" />
+											<Property name="DamageFactor" value="0.000000" />
+											<Property name="FullyInstalled" value="true" />
+											<Property name="Index" value="GcInventoryIndex">
+												<Property name="X" value="-1" />
+												<Property name="Y" value="-1" />
+											</Property>
+										</Property>																							
+									</Property>
+									<Property name="ValidSlotIndices" />
+									<Property name="Class" value="GcInventoryClass">
+										<Property name="InventoryClass" value="S" />
+									</Property>
+									<Property name="StackSizeGroup" value="GcInventoryStackSizeGroup">
+										<Property name="InventoryStackSizeGroup" value="Default" />
+									</Property>
+									<Property name="BaseStatValues" />
+									<Property name="SpecialSlots" />
+									<Property name="Width" value="0" />
+									<Property name="Height" value="0" />
+									<Property name="IsCool" value="false" />
+									<Property name="Name" value="" />
+									<Property name="Version" value="0" />
+								</Property>
+								<Property name="CostAmount" value="0" />
+								<Property name="CostCurrency" value="GcCurrency">
+									<Property name="Currency" value="Nanites" />
+								</Property>
+								<Property name="ShipType" value="GcSpaceshipClasses">
+									<Property name="ShipClass" value="Royal" />
+								</Property>
+								<Property name="UseOverrideSizeType" value="true" />
+								<Property name="OverrideSizeType" value="GcInventoryLayoutSizeType">
+									<Property name="SizeType" value="RoyLarge" />
+								</Property>
+								<Property name="NameOverride" value="Exe not working!" />
+								<Property name="IsGift" value="true" />
+								<Property name="IsRewardShip" value="true" />
+								<Property name="FormatAsSeasonal" value="false" />
+								<Property name="ModelViewOverride" value="GcModelViews">
+									<Property name="ModelViews" value="None" />
+								</Property>
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+		</Property>
+		<Property name="SpecialRewardTable" value="GcGenericRewardTableEntry" _id="FIND_ROBOT_RWD">
+			<Property name="Id" value="FIND_ROBOT_RWD" />
+			<Property name="List" value="GcRewardTableItemList">
+				<Property name="RewardChoice" value="GiveAll" />
+				<Property name="OverrideZeroSeed" value="false" />
+				<Property name="UseInventoryChoiceOverride" value="false" />
+				<Property name="IncrementStat" value="" />
+				<Property name="List">
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardMission">
+							<Property name="GcRewardMission">
+								<Property name="Mission" value="FIND_ROBOT_MID" />
+								<Property name="SetAsSelected" value="true" />
+								<Property name="Restart" value="false" />
+								<Property name="FailRewardIfMissionActive" value="true" />
+								<Property name="AlreadyActiveFailureMessage" value="" />
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+		</Property>    
+		<Property name="SpecialRewardTable" value="GcGenericRewardTableEntry" _id="R_LOCAL_ROBOT">
+			<Property name="Id" value="R_LOCAL_ROBOT" />
+			<Property name="List" value="GcRewardTableItemList">
+				<Property name="RewardChoice" value="TryFirst_ThenSelectAlways" />
+				<Property name="OverrideZeroSeed" value="false" />
+				<Property name="UseInventoryChoiceOverride" value="false" />
+				<Property name="IncrementStat" value="" />
+				<Property name="List">
+					<Property name="List" value="GcRewardTableItem" _index="0">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardScanEvent">
+							<Property name="GcRewardScanEvent">
+								<Property name="Event" value="SENT_CRASH_CORRUPT" />
+								<Property name="ScanEventTable" value="Planet" />
+								<Property name="DoAerialScan" value="true" />
+								<Property name="UseMissionSeedForEvent" value="false" />
+								<Property name="StartDelay" value="1.000000" />
+								<Property name="UseStartDelayWhenNoAerialScan" value="false" />
+								<Property name="ForceSilentFailure" value="true" />
+								<Property name="FailureOSD" value="" />
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+		</Property>
+  </Property>
+</Data>

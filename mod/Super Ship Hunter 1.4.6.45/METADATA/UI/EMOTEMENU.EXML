@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcPlayerEmoteList">
+  <Property name="Emotes">
+    <Property name="Emotes" value="GcPlayerEmote" _id="R_FREIGHTERCORE">
+      <Property name="Title" value="UI_LOCAL_ROBOT" />
+      <Property name="ChatText" value="" />
+      <Property name="ChatUsesPrefix" value="false" />
+      <Property name="EmoteID" value="R_FREIGHTERCORE" />
+      <Property name="AnimationName" value="R_FREIGHTERCORE" />
+      <Property name="PropData" value="GcPlayerEmotePropData" />
+      <Property name="Icon" value="TkTextureResource">
+        <Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/U4PRODUCTS/PRODUCT.FREIGHTERCORE.DDS" />
+        <Property name="ResHandle" value="GcResource">
+          <Property name="ResourceID" value="0" />
+        </Property>
+      </Property>
+      <Property name="LinkedSpecialID" value="" />
+      <Property name="NeverShowInMenu" value="false" />
+      <Property name="LoopAnimUntilMove" value="" />
+      <Property name="CloseMenuOnSelect" value="true" />
+      <Property name="MoveToCancel" value="true" />
+      <Property name="GekAnimationName" value="" />
+      <Property name="GekLoopAnimUntilMove" value="" />
+      <Property name="AvailableUnderwater" value="false" />
+      <Property name="RidingAnimationName" value="R_FREIGHTERCORE" />
+      <Property name="IsPetCommand" value="false" />
+      <Property name="PetCommandTitle" value="" />
+    </Property>
+    <Property name="Emotes" value="GcPlayerEmote" _id="FIND_ROBOT_MID">
+      <Property name="Title" value="UI_OUTSYS_ROBOT" />
+      <Property name="ChatText" value="" />
+      <Property name="ChatUsesPrefix" value="false" />
+      <Property name="EmoteID" value="FIND_ROBOT_MID" />
+      <Property name="AnimationName" value="FIND_ROBOT_MID" />
+      <Property name="PropData" value="GcPlayerEmotePropData" />
+      <Property name="Icon" value="TkTextureResource">
+        <Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SIGNALBOOST.DDS" />
+        <Property name="ResHandle" value="GcResource">
+          <Property name="ResourceID" value="0" />
+        </Property>
+      </Property>
+      <Property name="LinkedSpecialID" value="" />
+      <Property name="NeverShowInMenu" value="false" />
+      <Property name="LoopAnimUntilMove" value="" />
+      <Property name="CloseMenuOnSelect" value="true" />
+      <Property name="MoveToCancel" value="true" />
+      <Property name="GekAnimationName" value="" />
+      <Property name="GekLoopAnimUntilMove" value="" />
+      <Property name="AvailableUnderwater" value="false" />
+      <Property name="RidingAnimationName" value="FIND_ROBOT_MID" />
+      <Property name="IsPetCommand" value="false" />
+      <Property name="PetCommandTitle" value="" />
+    </Property>
+    <Property name="Emotes" value="GcPlayerEmote" _id="R_TEMP_ROBOT">
+      <Property name="Title" value="NOTIFY_SPACE_POLICE_TITLE" />
+      <Property name="ChatText" value="" />
+      <Property name="ChatUsesPrefix" value="true" />
+      <Property name="EmoteID" value="R_TEMP_ROBOT" />
+      <Property name="AnimationName" value="R_TEMP_ROBOT" />
+      <Property name="PropData" value="GcPlayerEmotePropData" />
+      <Property name="Icon" value="TkTextureResource">
+        <Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/SHIPTYPES/TYPE.SENTINEL.DDS" />
+        <Property name="ResHandle" value="GcResource">
+          <Property name="ResourceID" value="0" />
+        </Property>
+      </Property>
+      <Property name="LinkedSpecialID" value="" />
+      <Property name="NeverShowInMenu" value="false" />
+      <Property name="LoopAnimUntilMove" value="" />
+      <Property name="CloseMenuOnSelect" value="false" />
+      <Property name="MoveToCancel" value="true" />
+      <Property name="GekAnimationName" value="" />
+      <Property name="GekLoopAnimUntilMove" value="" />
+      <Property name="AvailableUnderwater" value="false" />
+      <Property name="RidingAnimationName" value="R_TEMP_ROBOT" />
+      <Property name="IsPetCommand" value="false" />
+      <Property name="PetCommandTitle" value="" />
+    </Property>
+    <Property name="Emotes" value="GcPlayerEmote" _id="R_TEMP_EXOTIC">
+      <Property name="Title" value="BASESTATS_ROYAL_L" />
+      <Property name="ChatText" value="" />
+      <Property name="ChatUsesPrefix" value="true" />
+      <Property name="EmoteID" value="R_TEMP_EXOTIC" />
+      <Property name="AnimationName" value="R_TEMP_EXOTIC" />
+      <Property name="PropData" value="GcPlayerEmotePropData" />
+      <Property name="Icon" value="TkTextureResource">
+        <Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/SHIPTYPES/TYPE.EXOTIC.DDS" />
+        <Property name="ResHandle" value="GcResource">
+          <Property name="ResourceID" value="0" />
+        </Property>
+      </Property>
+      <Property name="LinkedSpecialID" value="" />
+      <Property name="NeverShowInMenu" value="false" />
+      <Property name="LoopAnimUntilMove" value="" />
+      <Property name="CloseMenuOnSelect" value="false" />
+      <Property name="MoveToCancel" value="true" />
+      <Property name="GekAnimationName" value="" />
+      <Property name="GekLoopAnimUntilMove" value="" />
+      <Property name="AvailableUnderwater" value="false" />
+      <Property name="RidingAnimationName" value="R_TEMP_EXOTIC" />
+      <Property name="IsPetCommand" value="false" />
+      <Property name="PetCommandTitle" value="" />
+    </Property>
+  </Property>
+</Data>

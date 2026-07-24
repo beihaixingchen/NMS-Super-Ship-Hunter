@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="TkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="FINDER_ACTIVE_OBJ_TIP" />
+			<Property name="BrazilianPortuguese" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="Dutch" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="English" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="French" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="German" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="Italian" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="Japanese" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="Korean" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="LatinAmericanSpanish" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="Polish" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="Portuguese" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="Russian" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="SimplifiedChinese" value="当前搜索程序&lt;TRADEABLE&gt;已注册&lt;&gt;。&#xA;当前目标未搜索到, 使用飞船或者货船的星图跃迁可以扩大搜索范围。" />
+			<Property name="Spanish" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="TencentChinese" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+			<Property name="TraditionalChinese" value="當前搜索程式&lt;TRADEABLE&gt;已注册&lt;&gt;。&#xA;當前目標未搜索到, 使用飛船或者貨船的銀河系地圖跳躍可以擴大搜索範圍。" />
+			<Property name="USEnglish" value="Query subroutines are currently &lt;TRADEABLE&gt;ACTIVE&lt;&gt;.&#xA;Increase search coverage through warp travel. Use &lt;IMG&gt;QUICK_MENU&lt;&gt; to open &lt;COMMODITY&gt;Galactic Map&lt;&gt;." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="FINDER_ACTIVE_OBJ" />
+			<Property name="BrazilianPortuguese" value="Query Active" />
+			<Property name="Dutch" value="Query Active" />
+			<Property name="English" value="Query Active" />
+			<Property name="French" value="Query Active" />
+			<Property name="German" value="Query Active" />
+			<Property name="Italian" value="Query Active" />
+			<Property name="Japanese" value="Query Active" />
+			<Property name="Korean" value="Query Active" />
+			<Property name="LatinAmericanSpanish" value="Query Active" />
+			<Property name="Polish" value="Query Active" />
+			<Property name="Portuguese" value="Query Active" />
+			<Property name="Russian" value="Query Active" />
+			<Property name="SimplifiedChinese" value="搜索已注册" />
+			<Property name="Spanish" value="Query Active" />
+			<Property name="TencentChinese" value="Query Active" />
+			<Property name="TraditionalChinese" value="搜索已注册" />
+			<Property name="USEnglish" value="Query Active" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="FINDER_SEARCH_OBJ" />
+			<Property name="BrazilianPortuguese" value="Search Registered with Navigation Computer" />
+			<Property name="Dutch" value="Search Registered with Navigation Computer" />
+			<Property name="English" value="Search Registered with Navigation Computer" />
+			<Property name="French" value="Search Registered with Navigation Computer" />
+			<Property name="German" value="Search Registered with Navigation Computer" />
+			<Property name="Italian" value="Search Registered with Navigation Computer" />
+			<Property name="Japanese" value="Search Registered with Navigation Computer" />
+			<Property name="Korean" value="Search Registered with Navigation Computer" />
+			<Property name="LatinAmericanSpanish" value="Search Registered with Navigation Computer" />
+			<Property name="Polish" value="Search Registered with Navigation Computer" />
+			<Property name="Portuguese" value="Search Registered with Navigation Computer" />
+			<Property name="Russian" value="Search Registered with Navigation Computer" />
+			<Property name="SimplifiedChinese" value="已在导航计算机中启用搜索" />
+			<Property name="Spanish" value="Search Registered with Navigation Computer" />
+			<Property name="TencentChinese" value="Search Registered with Navigation Computer" />
+			<Property name="TraditionalChinese" value="已在導航電腦中啟用搜索" />
+			<Property name="USEnglish" value="Search Registered with Navigation Computer" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="FINDER_SYSTEM_OBJ" />
+			<Property name="BrazilianPortuguese" value="Travel to Target System" />
+			<Property name="Dutch" value="Travel to Target System" />
+			<Property name="English" value="Travel to Target System" />
+			<Property name="French" value="Travel to Target System" />
+			<Property name="German" value="Travel to Target System" />
+			<Property name="Italian" value="Travel to Target System" />
+			<Property name="Japanese" value="Travel to Target System" />
+			<Property name="Korean" value="Travel to Target System" />
+			<Property name="LatinAmericanSpanish" value="Travel to Target System" />
+			<Property name="Polish" value="Travel to Target System" />
+			<Property name="Portuguese" value="Travel to Target System" />
+			<Property name="Russian" value="Travel to Target System" />
+			<Property name="SimplifiedChinese" value="前往目标星系" />
+			<Property name="Spanish" value="Travel to Target System" />
+			<Property name="TencentChinese" value="Travel to Target System" />
+			<Property name="TraditionalChinese" value="前往目標星系" />
+			<Property name="USEnglish" value="Travel to Target System" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="FINDER_SYSTEM_OBJ_TIP" />
+			<Property name="BrazilianPortuguese" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Dutch" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="English" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="French" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="German" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Italian" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Japanese" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Korean" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="LatinAmericanSpanish" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Polish" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Portuguese" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Russian" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="SimplifiedChinese" value="符合指定搜索条件的星球位于&lt;TECHNOLOGY&gt;附近的星系&lt;&gt;。&#xA;登上飞船进入太空将&lt;SPECIAL&gt;自动跃迁&lt;&gt;到目标星系。&#xA;或者使用&lt;STELLAR&gt;星图&lt;&gt;启动曲速航行。" />
+			<Property name="Spanish" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="TencentChinese" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="TraditionalChinese" value="符合指定搜索條件的星球位於&lt;TECHNOLOGY&gt;附近的星系&lt;&gt;。&#xA;登上飛船進入太空將&lt;SPECIAL&gt;自動跳躍&lt;&gt;到目標星系。&#xA;或者使用&lt;STELLAR&gt;銀河系地圖&lt;&gt;啟動曲速航行。" />
+			<Property name="USEnglish" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="FINDER_SYSTEM_OBJ_TIP1" />
+			<Property name="BrazilianPortuguese" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Dutch" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="English" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="French" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="German" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Italian" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Japanese" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Korean" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="LatinAmericanSpanish" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Polish" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Portuguese" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="Russian" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="SimplifiedChinese" value="符合指定搜索条件的星球位于&lt;TECHNOLOGY&gt;附近的星系&lt;&gt;。&#xA;使用&lt;STELLAR&gt;星图&lt;&gt;启动曲速航行。" />
+			<Property name="Spanish" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="TencentChinese" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+			<Property name="TraditionalChinese" value="符合指定搜索條件的星球位於&lt;TECHNOLOGY&gt;附近的星系&lt;&gt;。&#xA;使用&lt;STELLAR&gt;銀河系地圖&lt;&gt;啟動曲速航行。" />
+			<Property name="USEnglish" value="A planet matching the given query parameters has been detected in a &lt;TECHNOLOGY&gt;remote system&lt;&gt;.&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate travel to the marked coordinates." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="FINDER_SYSTEM_OBJ_WAIT" />
+			<Property name="BrazilianPortuguese" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Dutch" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="English" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="French" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="German" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Italian" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Japanese" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Korean" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="LatinAmericanSpanish" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Polish" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Portuguese" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Russian" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="SimplifiedChinese" value="搜索结果位于&lt;TECHNOLOGY&gt;附近的星系&lt;&gt;&#xA;登上飞船进入太空将&lt;SPECIAL&gt;自动跃迁&lt;&gt;到目标星系&#xA;或者使用&lt;STELLAR&gt;星图&lt;&gt;启动曲速航行" />
+			<Property name="Spanish" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="TencentChinese" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="TraditionalChinese" value="&lt;TITLE&gt;搜索結果位於&lt;&gt; &lt;TECHNOLOGY&gt;附近的星系&lt;&gt;&#xA;登上飛船進入太空將&lt;SPECIAL&gt;自動跳躍&lt;&gt;到目標星系&#xA;或者使用&lt;STELLAR&gt;銀河系地圖&lt;&gt;啟動曲速航行" />
+			<Property name="USEnglish" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Board your ship and enter space for &lt;SPECIAL&gt;automatic warping&lt;&gt; to the target system&#xA;or access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="FINDER_SYSTEM_OBJ_WAIT1" />
+			<Property name="BrazilianPortuguese" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Dutch" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="English" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="French" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="German" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Italian" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Japanese" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Korean" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="LatinAmericanSpanish" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Polish" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Portuguese" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="Russian" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="SimplifiedChinese" value="搜索结果位于&lt;TECHNOLOGY&gt;附近的星系&lt;&gt;&#xA;使用&lt;STELLAR&gt;星图&lt;&gt;启动曲速航行" />
+			<Property name="Spanish" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="TencentChinese" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+			<Property name="TraditionalChinese" value="&lt;TITLE&gt;搜索結果位於&lt;&gt; &lt;TECHNOLOGY&gt;附近的星系&lt;&gt;&#xA;使用&lt;STELLAR&gt;銀河系地圖&lt;&gt;啟動曲速航行" />
+			<Property name="USEnglish" value="&lt;TITLE&gt;Query result located in&lt;&gt; &lt;TECHNOLOGY&gt;remote system&lt;&gt;&#xA;Access the &lt;STELLAR&gt;Galactic Map&lt;&gt; to initiate warp travel" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="FINDER_SUB_1" />
+			<Property name="BrazilianPortuguese" value="Active Deep Space Scan" />
+			<Property name="Dutch" value="Active Deep Space Scan" />
+			<Property name="English" value="Active Deep Space Scan" />
+			<Property name="French" value="Active Deep Space Scan" />
+			<Property name="German" value="Active Deep Space Scan" />
+			<Property name="Italian" value="Active Deep Space Scan" />
+			<Property name="Japanese" value="Active Deep Space Scan" />
+			<Property name="Korean" value="Active Deep Space Scan" />
+			<Property name="LatinAmericanSpanish" value="Active Deep Space Scan" />
+			<Property name="Polish" value="Active Deep Space Scan" />
+			<Property name="Portuguese" value="Active Deep Space Scan" />
+			<Property name="Russian" value="Active Deep Space Scan" />
+			<Property name="SimplifiedChinese" value="主动深空扫描" />
+			<Property name="Spanish" value="Active Deep Space Scan" />
+			<Property name="TencentChinese" value="Active Deep Space Scan" />
+			<Property name="TraditionalChinese" value="主動深空掃描" />
+			<Property name="USEnglish" value="Active Deep Space Scan" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="UI_OUTSYS_ROBOT" />
+			<Property name="BrazilianPortuguese" value="Outsystem Sentinel Signal" />
+			<Property name="Dutch" value="Outsystem Sentinel Signal" />
+			<Property name="English" value="Outsystem Sentinel Signal" />
+			<Property name="French" value="Outsystem Sentinel Signal" />
+			<Property name="German" value="Outsystem Sentinel Signal" />
+			<Property name="Italian" value="Outsystem Sentinel Signal" />
+			<Property name="Japanese" value="Outsystem Sentinel Signal" />
+			<Property name="Korean" value="Outsystem Sentinel Signal" />
+			<Property name="LatinAmericanSpanish" value="Outsystem Sentinel Signal" />
+			<Property name="Polish" value="Outsystem Sentinel Signal" />
+			<Property name="Portuguese" value="Outsystem Sentinel Signal" />
+			<Property name="Russian" value="Outsystem Sentinel Signal" />
+			<Property name="SimplifiedChinese" value="系外拦截机信号" />
+			<Property name="Spanish" value="Outsystem Sentinel Signal" />
+			<Property name="TencentChinese" value="Outsystem Sentinel Signal" />
+			<Property name="TraditionalChinese" value="系外攔截艦信號" />
+			<Property name="USEnglish" value="Outsystem Sentinel Signal" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="UI_LOCAL_ROBOT" />
+			<Property name="BrazilianPortuguese" value="Local Sentinel Signal" />
+			<Property name="Dutch" value="Local Sentinel Signal" />
+			<Property name="English" value="Local Sentinel Signal" />
+			<Property name="French" value="Local Sentinel Signal" />
+			<Property name="German" value="Local Sentinel Signal" />
+			<Property name="Italian" value="Local Sentinel Signal" />
+			<Property name="Japanese" value="Local Sentinel Signal" />
+			<Property name="Korean" value="Local Sentinel Signal" />
+			<Property name="LatinAmericanSpanish" value="Local Sentinel Signal" />
+			<Property name="Polish" value="Local Sentinel Signal" />
+			<Property name="Portuguese" value="Local Sentinel Signal" />
+			<Property name="Russian" value="Local Sentinel Signal" />
+			<Property name="SimplifiedChinese" value="系内拦截机信号" />
+			<Property name="Spanish" value="Local Sentinel Signal" />
+			<Property name="TencentChinese" value="Local Sentinel Signal" />
+			<Property name="TraditionalChinese" value="系内攔截艦信號" />
+			<Property name="USEnglish" value="Local Sentinel Signal" />
+		</Property>
+	</Property>
+</Data>

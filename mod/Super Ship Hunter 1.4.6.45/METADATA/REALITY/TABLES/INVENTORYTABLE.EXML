@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcInventoryTable">
+	<Property name="GenerationData" value="GcInventoryLayoutGenerationData">
+		<Property name="GenerationDataPerSizeType">
+            <Property name="RoyLarge" value="GcInventoryLayoutGenerationDataEntry">
+				<Property name="MinSlots" value="115" />
+				<Property name="MaxSlots" value="115" />
+				<Property name="MinTechSlots" value="60" />
+				<Property name="MaxTechSlots" value="60" />
+				<Property name="MinCargoSlots" value="115" />
+				<Property name="MaxCargoSlots" value="115" />
+				<Property name="Bounds" value="GcInventoryLayoutGenerationBounds">
+					<Property name="MaxWidthSmall" value="6" />
+					<Property name="MaxHeightSmall" value="5" />
+					<Property name="MaxWidthStandard" value="10" />
+					<Property name="MaxHeightStandard" value="5" />
+					<Property name="MaxWidthLarge" value="10" />
+					<Property name="MaxHeightLarge" value="12" />
+				</Property>
+				<Property name="TechBounds" value="GcInventoryLayoutGenerationBounds">
+					<Property name="MaxWidthSmall" value="7" />
+					<Property name="MaxHeightSmall" value="3" />
+					<Property name="MaxWidthStandard" value="10" />
+					<Property name="MaxHeightStandard" value="3" />
+					<Property name="MaxWidthLarge" value="10" />
+					<Property name="MaxHeightLarge" value="6" />
+				</Property>
+				<Property name="MaxNumSpecialTechSlots" value="4" />
+				<Property name="SpecialTechSlotMaxIndex" value="GcInventoryIndex">
+					<Property name="X" value="9" />
+					<Property name="Y" value="2" />
+				</Property>
+			</Property>
+            <Property name="RobotLarge" value="GcInventoryLayoutGenerationDataEntry">
+				<Property name="MinSlots" value="120" />
+				<Property name="MaxSlots" value="120" />
+				<Property name="MinTechSlots" value="60" />
+				<Property name="MaxTechSlots" value="60" />
+				<Property name="MinCargoSlots" value="120" />
+				<Property name="MaxCargoSlots" value="120" />
+				<Property name="Bounds" value="GcInventoryLayoutGenerationBounds">
+					<Property name="MaxWidthSmall" value="7" />
+					<Property name="MaxHeightSmall" value="5" />
+					<Property name="MaxWidthStandard" value="10" />
+					<Property name="MaxHeightStandard" value="5" />
+					<Property name="MaxWidthLarge" value="10" />
+					<Property name="MaxHeightLarge" value="12" />
+				</Property>
+				<Property name="TechBounds" value="GcInventoryLayoutGenerationBounds">
+					<Property name="MaxWidthSmall" value="7" />
+					<Property name="MaxHeightSmall" value="3" />
+					<Property name="MaxWidthStandard" value="10" />
+					<Property name="MaxHeightStandard" value="3" />
+					<Property name="MaxWidthLarge" value="10" />
+					<Property name="MaxHeightLarge" value="6" />
+				</Property>
+				<Property name="MaxNumSpecialTechSlots" value="4" />
+				<Property name="SpecialTechSlotMaxIndex" value="GcInventoryIndex">
+					<Property name="X" value="-1" />
+					<Property name="Y" value="-1" />
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+</Data>
