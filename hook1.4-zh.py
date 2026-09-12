@@ -175,19 +175,51 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
     if not tokens:
         raise ValueError("Pattern cannot be empty")
     try:
-        regex_bytes = b""
-        for t in tokens:
-            if t == "??":
-                regex_bytes += b"."
-            else:
-                regex_bytes += re.escape(bytes([int(t, 16)]))
+        literals = [(k, int(t, 16)) for k, t in enumerate(tokens) if t != "??"]
     except ValueError:
         raise ValueError("Invalid pattern format. Use hex bytes like 'FF 00 AA' or '??'")
     
     pattern_len = len(tokens)
     
-    # 创建正则表达式模式用于快速搜索
-    pattern_re = re.compile(regex_bytes, re.DOTALL)
+    # 快速方案：取最长连续字面量段作为锚点，用 C 级 bytes.find 扫描后回验通配符
+    # 退化方案（字面量太少时）：连续通配符合并为 .{n} 的正则
+    anchor_bytes = None
+    anchor_off = 0
+    if len(literals) >= 6:
+        best_start, best_len, run_start = 0, 0, None
+        for k, t in enumerate(tokens + ["??"]):
+            if t != "??":
+                if run_start is None:
+                    run_start = k
+            elif run_start is not None:
+                if k - run_start > best_len:
+                    best_start, best_len = run_start, k - run_start
+                run_start = None
+        anchor_bytes = bytes(int(tokens[k], 16) for k in range(best_start, best_start + best_len))
+        anchor_off = best_start
+    
+    pattern_re = None
+    if anchor_bytes is None:
+        regex_bytes = b""
+        i = 0
+        while i < pattern_len:
+            if tokens[i] == "??":
+                j = i
+                while j < pattern_len and tokens[j] == "??":
+                    j += 1
+                n = j - i
+                regex_bytes += b"." if n == 1 else b".{" + str(n).encode() + b"}"
+                i = j
+            else:
+                regex_bytes += re.escape(bytes([int(tokens[i], 16)]))
+                i += 1
+        pattern_re = re.compile(regex_bytes, re.DOTALL)
+    
+    def verify_literals(buf, start):
+        for k, v in literals:
+            if buf[start + k] != v:
+                return False
+        return True
     
     # 获取进程ID并打开进程
     pid = get_process_id(process_name)
@@ -248,16 +280,28 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
                                         ctypes.byref(bytes_read)):
                         
                         if bytes_read.value >= pattern_len:
-                            # 转换为Python字节
-                            data = bytes(buffer[:bytes_read.value])
+                            # 转换为Python字节（先整体memcpy再切片，切片ctypes数组是逐元素的慢路径）
+                            data = bytes(buffer)[:bytes_read.value]
                             total_read += bytes_read.value
                             blob = carry + data
                             
-                            # 使用正则表达式搜索模式（比纯Python循环快得多）
-                            match = pattern_re.search(blob)
-                            if match:
+                            # 锚点快速扫描（C级find+回验通配符），无锚点时用正则
+                            match_start = -1
+                            if anchor_bytes is not None:
+                                pos = blob.find(anchor_bytes)
+                                while pos != -1:
+                                    s = pos - anchor_off
+                                    if s >= 0 and s + pattern_len <= len(blob) and verify_literals(blob, s):
+                                        match_start = s
+                                        break
+                                    pos = blob.find(anchor_bytes, pos + 1)
+                            else:
+                                match = pattern_re.search(blob)
+                                if match:
+                                    match_start = match.start()
+                            if match_start >= 0:
                                 pattern_matches += 1
-                                match_addr = read_addr - len(carry) + match.start()
+                                match_addr = read_addr - len(carry) + match_start
                                 if verbose:
                                     print(f"找到匹配地址: 0x{match_addr+addr_offset:016X}")
                                 return f"0x{match_addr+addr_offset:016X}"

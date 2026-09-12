@@ -175,19 +175,52 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
     if not tokens:
         raise ValueError("Pattern cannot be empty")
     try:
-        regex_bytes = b""
-        for t in tokens:
-            if t == "??":
-                regex_bytes += b"."
-            else:
-                regex_bytes += re.escape(bytes([int(t, 16)]))
+        literals = [(k, int(t, 16)) for k, t in enumerate(tokens) if t != "??"]
     except ValueError:
         raise ValueError("Invalid pattern format. Use hex bytes like 'FF 00 AA' or '??'")
     
     pattern_len = len(tokens)
     
-    # Create regex pattern for fast searching
-    pattern_re = re.compile(regex_bytes, re.DOTALL)
+    # Fast path: use the longest literal run as anchor, scan with C-speed
+    # bytes.find, then verify wildcards. Fallback (too few literals): regex
+    # with consecutive wildcards merged into .{n}
+    anchor_bytes = None
+    anchor_off = 0
+    if len(literals) >= 6:
+        best_start, best_len, run_start = 0, 0, None
+        for k, t in enumerate(tokens + ["??"]):
+            if t != "??":
+                if run_start is None:
+                    run_start = k
+            elif run_start is not None:
+                if k - run_start > best_len:
+                    best_start, best_len = run_start, k - run_start
+                run_start = None
+        anchor_bytes = bytes(int(tokens[k], 16) for k in range(best_start, best_start + best_len))
+        anchor_off = best_start
+    
+    pattern_re = None
+    if anchor_bytes is None:
+        regex_bytes = b""
+        i = 0
+        while i < pattern_len:
+            if tokens[i] == "??":
+                j = i
+                while j < pattern_len and tokens[j] == "??":
+                    j += 1
+                n = j - i
+                regex_bytes += b"." if n == 1 else b".{" + str(n).encode() + b"}"
+                i = j
+            else:
+                regex_bytes += re.escape(bytes([int(tokens[i], 16)]))
+                i += 1
+        pattern_re = re.compile(regex_bytes, re.DOTALL)
+    
+    def verify_literals(buf, start):
+        for k, v in literals:
+            if buf[start + k] != v:
+                return False
+        return True
     
     # Get process ID and open process
     pid = get_process_id(process_name)
@@ -248,16 +281,29 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
                                         ctypes.byref(bytes_read)):
                         
                         if bytes_read.value >= pattern_len:
-                            # Convert to Python bytes
-                            data = bytes(buffer[:bytes_read.value])
+                            # Convert to Python bytes (bulk memcpy first, then slice;
+                            # slicing the ctypes array itself is a slow per-element path)
+                            data = bytes(buffer)[:bytes_read.value]
                             total_read += bytes_read.value
                             blob = carry + data
                             
-                            # Use regex to search for pattern (much faster than pure Python loop)
-                            match = pattern_re.search(blob)
-                            if match:
+                            # Anchor fast scan (C-speed find + wildcard verify), regex fallback
+                            match_start = -1
+                            if anchor_bytes is not None:
+                                pos = blob.find(anchor_bytes)
+                                while pos != -1:
+                                    s = pos - anchor_off
+                                    if s >= 0 and s + pattern_len <= len(blob) and verify_literals(blob, s):
+                                        match_start = s
+                                        break
+                                    pos = blob.find(anchor_bytes, pos + 1)
+                            else:
+                                match = pattern_re.search(blob)
+                                if match:
+                                    match_start = match.start()
+                            if match_start >= 0:
                                 pattern_matches += 1
-                                match_addr = read_addr - len(carry) + match.start()
+                                match_addr = read_addr - len(carry) + match_start
                                 if verbose:
                                     print(f"Found match address: 0x{match_addr+addr_offset:016X}")
                                 return f"0x{match_addr+addr_offset:016X}"
