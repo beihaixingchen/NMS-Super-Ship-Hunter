@@ -170,18 +170,24 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
         verbose: 是否打印扫描进度和结果 (默认True)
         addr_offset: 特征码地址偏移, 向前为负向后为正 (默认0)
     """
-    # 解析字节模式
-    try:
-        pattern = bytes.fromhex(pattern_str.replace(" ", ""))
-    except ValueError:
-        raise ValueError("Invalid pattern format. Use hex bytes like 'FF 00 AA'")
-    
-    pattern_len = len(pattern)
-    if pattern_len == 0:
+    # 解析字节模式 (支持 ?? 通配符)
+    tokens = pattern_str.split()
+    if not tokens:
         raise ValueError("Pattern cannot be empty")
+    try:
+        regex_bytes = b""
+        for t in tokens:
+            if t == "??":
+                regex_bytes += b"."
+            else:
+                regex_bytes += re.escape(bytes([int(t, 16)]))
+    except ValueError:
+        raise ValueError("Invalid pattern format. Use hex bytes like 'FF 00 AA' or '??'")
+    
+    pattern_len = len(tokens)
     
     # 创建正则表达式模式用于快速搜索
-    pattern_re = re.compile(re.escape(pattern))
+    pattern_re = re.compile(regex_bytes, re.DOTALL)
     
     # 获取进程ID并打开进程
     pid = get_process_id(process_name)
@@ -221,6 +227,7 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
                 # 扫描可读内存区域 - 使用更大的块
                 chunk_size = 10 * 1024 * 1024  # 10MB块 (显著减少读取调用次数)
                 offset = 0
+                carry = b""
                 
                 while offset < region_size:
                     read_size = min(chunk_size, region_size - offset)
@@ -241,18 +248,21 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
                                         ctypes.byref(bytes_read)):
                         
                         if bytes_read.value >= pattern_len:
-                            # 转换为Python字节（使用memoryview避免复制）
-                            data_view = memoryview(bytes(buffer))
+                            # 转换为Python字节
+                            data = bytes(buffer[:bytes_read.value])
                             total_read += bytes_read.value
+                            blob = carry + data
                             
                             # 使用正则表达式搜索模式（比纯Python循环快得多）
-                            match = pattern_re.search(data_view)
+                            match = pattern_re.search(blob)
                             if match:
                                 pattern_matches += 1
-                                match_addr = read_addr + match.start()
+                                match_addr = read_addr - len(carry) + match.start()
                                 if verbose:
                                     print(f"找到匹配地址: 0x{match_addr+addr_offset:016X}")
                                 return f"0x{match_addr+addr_offset:016X}"
+                            # 保留块尾部，避免特征码跨块边界漏匹配
+                            carry = blob[-(pattern_len - 1):]
                     
                     # 更高效的进度报告
                     if verbose:  # 只在verbose时更新进度
@@ -385,8 +395,8 @@ def clear_memory_range(h_process, start_address, size, description):
 if __name__ == "__main__":
     print("\n" + "="*50)
     print("MOD: 超级飞船猎人")
-    print("版本: 1.4.6.42")
-    print("时间: 2026.05.30")
+    print("版本: 1.4.7.00")
+    print("时间: 2026.09.13")
     print("作者: 北海星辰")
     print("QQ群: 1群:884609884(如满请加2群) 2群:618088968")
     print("简介: 使用表情立刻获取本星系护卫飞船和异星飞船!")
@@ -397,12 +407,12 @@ if __name__ == "__main__":
     
     try:
         # 1. 扫描关键字节模式获取两个目标地址
-        template_sentinel_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 78 00 00 00 00 00 00 00 00 00 00 00 33 00 00 00 17 00 00 00"
-        template_exotic_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 78 00 00 00 00 00 00 00 01 00 00 00 33 00 00 00 0E 00 00 00"
-        local_sentinel_pattern = "00 32 00 00 00 00 01 00 00 FF FF FF FF"
+        template_sentinel_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 78 00 00 00 00 00 00 00 00 00 00 00 34 00 00 00 17 00 00 00"
+        template_exotic_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 78 00 00 00 00 00 00 00 01 00 00 00 34 00 00 00 0E 00 00 00"
+        local_sentinel_pattern = "01 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 32 00 00 00 00 01 00 00 FF FF FF FF"
         # local_exotic_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 0A 00 00 00 06"
         
-        local_sentinel_address = scan_pattern(local_sentinel_pattern, "本地护卫飞船种子", -24+1)
+        local_sentinel_address = scan_pattern(local_sentinel_pattern, "本地护卫飞船种子", -0x8)
         template_sentinel_address = scan_pattern(template_sentinel_pattern, "护卫飞船模板", -64)
         template_exotic_address = scan_pattern(template_exotic_pattern, "异星飞船模板", -64)
 

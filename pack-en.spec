@@ -26,7 +26,7 @@ exe = EXE(
     a.binaries,
     a.zipfiles,
     a.datas,
-    name='Super Ship Hunter V1.4.6.42.1',
+    name='Super Ship Hunter V1.4.7.00',
     onefile=True,
     debug=False,
     bootloader_ignore_signals=False,

@@ -170,18 +170,24 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
         verbose: Whether to print scan progress and results (default True)
         addr_offset: Pattern address offset, negative for backward, positive for forward (default 0)
     """
-    # Parse byte pattern
-    try:
-        pattern = bytes.fromhex(pattern_str.replace(" ", ""))
-    except ValueError:
-        raise ValueError("Invalid pattern format. Use hex bytes like 'FF 00 AA'")
-    
-    pattern_len = len(pattern)
-    if pattern_len == 0:
+    # Parse byte pattern (supports ?? wildcards)
+    tokens = pattern_str.split()
+    if not tokens:
         raise ValueError("Pattern cannot be empty")
+    try:
+        regex_bytes = b""
+        for t in tokens:
+            if t == "??":
+                regex_bytes += b"."
+            else:
+                regex_bytes += re.escape(bytes([int(t, 16)]))
+    except ValueError:
+        raise ValueError("Invalid pattern format. Use hex bytes like 'FF 00 AA' or '??'")
+    
+    pattern_len = len(tokens)
     
     # Create regex pattern for fast searching
-    pattern_re = re.compile(re.escape(pattern))
+    pattern_re = re.compile(regex_bytes, re.DOTALL)
     
     # Get process ID and open process
     pid = get_process_id(process_name)
@@ -221,6 +227,7 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
                 # Scan readable memory regions - using larger chunks
                 chunk_size = 10 * 1024 * 1024  # 10MB chunks (significantly reduces read calls)
                 offset = 0
+                carry = b""
                 
                 while offset < region_size:
                     read_size = min(chunk_size, region_size - offset)
@@ -241,18 +248,21 @@ def byte_scan(process_name, pattern_str, verbose=True, addr_offset=0):
                                         ctypes.byref(bytes_read)):
                         
                         if bytes_read.value >= pattern_len:
-                            # Convert to Python bytes (use memoryview to avoid copying)
-                            data_view = memoryview(bytes(buffer))
+                            # Convert to Python bytes
+                            data = bytes(buffer[:bytes_read.value])
                             total_read += bytes_read.value
+                            blob = carry + data
                             
                             # Use regex to search for pattern (much faster than pure Python loop)
-                            match = pattern_re.search(data_view)
+                            match = pattern_re.search(blob)
                             if match:
                                 pattern_matches += 1
-                                match_addr = read_addr + match.start()
+                                match_addr = read_addr - len(carry) + match.start()
                                 if verbose:
                                     print(f"Found match address: 0x{match_addr+addr_offset:016X}")
                                 return f"0x{match_addr+addr_offset:016X}"
+                            # Keep chunk tail so patterns spanning chunk boundaries are not missed
+                            carry = blob[-(pattern_len - 1):]
                     
                     # More efficient progress reporting
                     if verbose:  # Only update progress when verbose is True
@@ -383,7 +393,7 @@ def clear_memory_range(h_process, start_address, size, description):
 
 if __name__ == "__main__":
     print("\n" + "="*50)
-    print("Super Sentinel Hunter V1.4.6.42  @beihaixingchen")
+    print("Super Sentinel Hunter V1.4.7.00  @beihaixingchen")
     print("Description: Obtain sentinel & exotic ship without landing - use emote shortcuts!")
     
     print("\n" + "="*50)
@@ -392,12 +402,12 @@ if __name__ == "__main__":
     
     try:
         # 1. Scan key byte patterns to get two target addresses
-        template_sentinel_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 78 00 00 00 00 00 00 00 00 00 00 00 33 00 00 00 17 00 00 00"
-        template_exotic_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 78 00 00 00 00 00 00 00 01 00 00 00 33 00 00 00 0E 00 00 00"
-        local_sentinel_pattern = "00 32 00 00 00 00 01 00 00 FF FF FF FF"
+        template_sentinel_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 78 00 00 00 00 00 00 00 00 00 00 00 34 00 00 00 17 00 00 00"
+        template_exotic_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 78 00 00 00 00 00 00 00 01 00 00 00 34 00 00 00 0E 00 00 00"
+        local_sentinel_pattern = "01 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 32 00 00 00 00 01 00 00 FF FF FF FF"
         # local_exotic_pattern = "01 00 00 00 00 00 00 00 01 00 00 00 0A 00 00 00 06"
         
-        local_sentinel_address = scan_pattern(local_sentinel_pattern, "local sentinel ship seed", -24+1)
+        local_sentinel_address = scan_pattern(local_sentinel_pattern, "local sentinel ship seed", -0x8)
         template_sentinel_address = scan_pattern(template_sentinel_pattern, "sentinel ship template", -64)
         template_exotic_address = scan_pattern(template_exotic_pattern, "exotic ship template", -64)
 

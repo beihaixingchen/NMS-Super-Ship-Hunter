@@ -1,6 +1,6 @@
 # Super Ship Hunter / 超级飞船猎人
 
-**Compatible with No Man's Sky 6.45.**
+**Compatible with No Man's Sky 7.00.**
 
 > **Warning:** This Mod may cause the game to crash. Back up your save before using it.
 
@@ -14,10 +14,10 @@ Tired of endlessly hunting sentinel or exotic ships? Super Ship Hunter changes t
 
 | Component | Version | Compatibility |
 | --- | --- | --- |
-| Game Mod | 1.4.6.45 | No Man's Sky 6.45 |
-| Companion application | 1.4.6.42.1 | Verified with No Man's Sky 6.45 |
+| Game Mod | 1.4.6.45 | No Man's Sky 7.00 |
+| Companion application | 1.4.7.00 | Verified with No Man's Sky 7.00 |
 
-The component versions differ because the existing `1.4.6.42.1` companion application remains compatible with game version 6.45.
+The component versions differ because the existing `1.4.6.45` game mod still works with game version 7.00; only the companion application needed an update.
 
 ### Emote/Hotkey Activation
 
@@ -32,7 +32,7 @@ The component versions differ because the existing `1.4.6.42.1` companion applic
 2. Download and extract the English release package.
 3. Copy the entire `Super Ship Hunter 1.4.6.45` folder into `No Man's Sky\GAMEDATA\MODS\`.
 4. Confirm the resulting structure is `No Man's Sky\GAMEDATA\MODS\Super Ship Hunter 1.4.6.45\METADATA\...`.
-5. Start the game and load your save, then run `Super Ship Hunter V1.4.6.42.1.exe`.
+5. Start the game and load your save, then run `Super Ship Hunter V1.4.7.00.exe`.
 
 To uninstall, delete the Mod folder and the executable.
 
@@ -82,7 +82,7 @@ Original Nexus Mods page: [Super Ship Hunter](https://www.nexusmods.com/nomanssk
 
 ## 中文
 
-**适配《无人深空》6.45。**
+**适配《无人深空》7.00。**
 
 > **警告：** 此 Mod 可能引起游戏崩溃，请先备份存档。
 
@@ -92,10 +92,10 @@ Original Nexus Mods page: [Super Ship Hunter](https://www.nexusmods.com/nomanssk
 
 | 组件 | 版本 | 兼容性 |
 | --- | --- | --- |
-| 游戏 Mod | 1.4.6.45 | 《无人深空》6.45 |
-| 辅助程序 | 1.4.6.42.1 | 已验证兼容《无人深空》6.45 |
+| 游戏 Mod | 1.4.6.45 | 《无人深空》7.00 |
+| 辅助程序 | 1.4.7.00 | 已验证兼容《无人深空》7.00 |
 
-两个组件的版本号不同，是因为现有的 `1.4.6.42.1` 辅助程序仍然兼容游戏 6.45。
+两个组件的版本号不同，是因为现有的 `1.4.6.45` 游戏 Mod 仍然兼容游戏 7.00，本次仅需更新辅助程序。
 
 ### 功能入口（表情菜单/快捷键）
 
@@ -110,7 +110,7 @@ Original Nexus Mods page: [Super Ship Hunter](https://www.nexusmods.com/nomanssk
 2. 下载并解压中文发布包。
 3. 将整个 `Super Ship Hunter 1.4.6.45` 文件夹复制到 `No Man's Sky\GAMEDATA\MODS\`。
 4. 确认目录结构为 `No Man's Sky\GAMEDATA\MODS\Super Ship Hunter 1.4.6.45\METADATA\...`。
-5. 启动游戏并载入存档，然后运行 `超级飞船猎人 V1.4.6.42.1.exe`。
+5. 启动游戏并载入存档，然后运行 `超级飞船猎人 V1.4.7.00.exe`。
 
 卸载时，删除对应的 Mod 文件夹和 EXE 即可。
 
